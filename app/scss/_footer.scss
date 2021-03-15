@@ -1,0 +1,132 @@
+.footer {
+    background-color: #000;
+    color: $white;
+    margin-top: 13rem;
+    padding: 4.37rem 0 4.9rem 0;
+    text-align: center;
+
+    @include breakpoint-up(large){
+        padding: 2.8rem 0;
+    }
+
+    .container {
+        @include breakpoint-up(large){
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 2rem 0;
+            grid-template-areas: 
+            "logo social"
+            "links copyright";
+            justify-items: start;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        margin: 0 0 3.44rem 0;
+
+        @include breakpoint-up(large){
+            grid-area: logo;
+            margin: 0;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        @include breakpoint-up(large){
+            flex-flow: row;
+            grid-area: links;
+        }
+
+        a {
+            color: $white;
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 2.37rem;
+
+                @include breakpoint-up(large){
+                    margin: 0;
+                    margin-right: 2rem;
+                }
+            }
+            
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                background-color: $white;
+                height: 3px;
+                bottom: -15px;
+                width: 25px;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: opacity 200ms ease-in-out;
+
+                @include breakpoint-up(large){
+                    bottom: 0px;
+                }
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    &__social {
+        margin: 4.3rem 0 0 0;
+
+        @include breakpoint-up(large){
+            grid-area: social;
+            margin: 0;
+            justify-self: end;
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+    
+            &::before {
+                content: "";
+                position: absolute;
+                width: 24px;
+                height: 3px;
+                background-color: white;
+                bottom: -13px;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: opacity 200ms ease-in-out;
+            }
+    
+            &:hover::before {
+                opacity: 1;
+            }
+
+        }         
+
+    }
+
+    &__copyright {
+        margin: 1.8rem 0 0 0;
+        color: $darkGray;
+
+        @include breakpoint-up(large){
+            grid-area: copyright;
+            margin: 0;
+            justify-self: end;
+        }
+    }
+
+}

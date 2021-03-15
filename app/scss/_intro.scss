@@ -1,0 +1,95 @@
+.intro {
+
+    .row {
+        position: relative;
+      
+    }
+    
+
+    &__image {
+
+        @include breakpoint-up(large) {
+            width: 64%;
+        }
+
+        &.flex {
+            flex-flow: column;
+    
+            @include breakpoint-up(large){
+                flex-flow: row;
+                align-items: flex-start;
+            }
+        }
+
+        .image1 {
+            max-width: 100%;
+    
+            @include breakpoint-up(large) {
+                display: none;
+            }        
+        }
+
+        .image2 {
+            min-width: 100%;
+    
+            @include breakpoint-down(medium) {
+                display: none;
+            }        
+        }
+    }
+
+    &__text {
+        text-align: center;
+
+        @include breakpoint-up(large) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            padding: 6rem 4rem 0 6rem;
+            text-align: left;
+        }
+
+        &.flex {
+            flex-flow: column;
+        }
+    }
+
+
+    &__text {
+        margin-top: 3.75rem;
+        background-color: $white;
+
+
+        h2 {
+            margin: 0;
+            text-align: center;
+            font-family: 'Josefin Sans';
+            text-transform: uppercase;
+            font-size: 1.875rem;
+            line-height: 1.1;
+
+            @include breakpoint-up(medium) {
+                font-size: 2.2rem;
+            }
+
+            @include breakpoint-up(large) {
+                font-size: 2.7rem;
+                text-align: left;
+            }
+        }
+
+        p {
+            font-family: 'Alata';
+            font-size: $font-md;
+            color: $darkGray;
+            letter-spacing: 0.06rem;
+            line-height: 1.5;
+            margin-bottom: 0;
+
+            @include breakpoint-up(medium) {
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
