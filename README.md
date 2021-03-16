@@ -1,10 +1,10 @@
-# Before start read the rest, pls know that this is a exercise I took from Frontend Mentor - Build a landing page with HTML, CSS and JS.
-
 # Frontend Mentor - Loopstudios landing page
 
 ![Design preview for the Loopstudios landing page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
+
+---- Before start read the rest, pls know that this is a exercise I took from Frontend Mentor - Build a landing page with HTML, CSS and JS. ----
 
 Thanks for checking out this front-end coding challenge.
 
